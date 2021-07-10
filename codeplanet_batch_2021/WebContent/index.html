@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+  a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+}
+</style>
+<script>
+function validate(){
+ let psw =	document.getElementById("pswd").value;
+ let cpsw =	document.getElementById("cpsw").value;
+ if(psw == cpsw)
+ {
+	 return true;
+	}
+ else {
+	 alert("password and confirm password are not same");
+	 return false;
+ }
+}
+
+
+</script>
+<body>
+
+<form action="/codeplanet_batch_2021/search" onsubmit="return validate()" method="get" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p2>Already have an account</p2>
+     <div class="clearfix">
+     <a href="login.html" target="_blank">login</a>
+    </div></br>
+    
+    
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+	<label for="uname"><b>username</b></label>
+    <input type="text" placeholder="Username" name="uname" id = "uname" required>
+	<hr>
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" id = "email" required>
+	<hr>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pswd" id="pswd" required>
+	<hr>
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="cpsw" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
